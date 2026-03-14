@@ -1,5 +1,5 @@
-import { set } from 'mongoose'
-import {use, useState} from 'react'
+
+import {useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 
@@ -39,6 +39,7 @@ const SignUp = () => {
       if(data.success===false){
         setError(data.message)
         setLoading(false)
+        return;
       }
         setLoading(false)
         setError(null)
