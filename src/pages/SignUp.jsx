@@ -1,3 +1,4 @@
+import { set } from 'mongoose'
 import {use, useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
@@ -40,6 +41,7 @@ const SignUp = () => {
         setLoading(false)
       }
         setLoading(false)
+        setError(null)
        navigate('/signin')
       
     } catch (error) {
