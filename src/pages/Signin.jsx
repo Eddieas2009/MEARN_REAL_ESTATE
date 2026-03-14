@@ -3,6 +3,7 @@ import {useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { loginStart, loginSuccess, loginFailure } from '../redux/user/counterSlice.js'
+import OAuth from '../components/OAuth.jsx'
 
 
 
@@ -72,10 +73,8 @@ const SignIn = () => {
           className='bg-slate-700 text-white p-3 rounded-lg font-semibold uppercase hover:bg-slate-600 disabled:bg-slate-400 transition-colors duration-300'>
           {loading ? 'Processing...' : 'Sign In'}
         </button>
-        <button          type='button'
-          className='bg-red-700 text-white p-3 rounded-lg font-semibold uppercase hover:bg-red-600 transition-colors duration-300'>
-          Sign in with Google
-        </button> 
+        <OAuth />
+       
       </form>
       <div className='text-center mt-4'>
         YOu dont have an account? <Link to='/signup' className='text-blue-500 hover:underline'>Sing up</Link>
